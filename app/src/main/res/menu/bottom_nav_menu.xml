@@ -15,6 +15,10 @@
         android:id="@+id/wellbeing"
         android:title="Wellbeing"
         android:icon="@drawable/ic_wellbeing24"/>
+    <item
+        android:id="@+id/login"
+        android:title="Login"
+        android:visible="false"/>
 
 
 </menu>

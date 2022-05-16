@@ -14,12 +14,18 @@
         android:theme="@style/Theme.FinalYearProject"
         tools:targetApi="31">
         <activity
+            android:name=".LoginActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditEventActivity"
             android:exported="false" />
         <activity
             android:name=".WeekViewActivity"
             android:exported="false"
-            android:parentActivityName=".CalendarActivity"/>
+            android:parentActivityName=".CalendarActivity" />
         <activity
             android:name=".CalendarActivity"
             android:exported="false" />

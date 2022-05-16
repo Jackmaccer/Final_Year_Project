@@ -15,5 +15,12 @@
         <!-- Customize your theme here. -->
     </style>
 
+    <style name="TextInpuLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+
+        <item name="hintTextColor">@color/black</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="boxStrokeColor">@color/black</item>
+    </style>
+
 
 </resources>
