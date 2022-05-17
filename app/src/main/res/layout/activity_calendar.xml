@@ -26,13 +26,12 @@
         android:layout_marginBottom="20dp"
         android:layout_marginTop="20dp">
 
-        <Button
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Previous"
             android:textColor="@color/black"
-            android:background="@null"
+            android:background="@drawable/ic_arrow_back"
             android:textStyle="bold"
             android:onClick="previousMonth"
             android:textSize="20sp"/>
@@ -49,13 +48,12 @@
             />
 
 
-        <Button
+        <ImageButton
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="Next"
             android:textColor="@color/black"
-            android:background="@null"
+            android:background="@drawable/ic_arrow_forward"
             android:textStyle="bold"
             android:onClick="nextMonth"
             android:textSize="20sp"/>
