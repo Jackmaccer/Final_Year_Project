@@ -6,30 +6,6 @@
     tools:context=".LoginFragment">
 
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Welcome please Sign Up or Login!"
-        android:layout_gravity="center"
-        android:layout_marginTop="-250dp"/>
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/signUpBT"
-        android:layout_marginLeft="50dp"
-        android:layout_marginTop="200dp"
-        android:background="@color/white"
-        android:text="Sign Up"
-        android:textColor="@color/black"/>
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/loginBT"
-        android:layout_marginLeft="250dp"
-        android:layout_marginTop="200dp"
-        android:background="@color/white"
-        android:text="Login"
-        android:textColor="@color/black"/>
 
 </FrameLayout>

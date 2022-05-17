@@ -66,12 +66,15 @@ public class SignUpActivity extends AppCompatActivity
                                     {
                                         if (task.isSuccessful()){
 
-                                            Toast.makeText(SignUpActivity.this, "Successfuly created", Toast.LENGTH_SHORT).show();
+                                            Toast.makeText(SignUpActivity.this, "Successfully created", Toast.LENGTH_SHORT).show();
                                             FirebaseUser user = mAuth.getCurrentUser();
                                             if (user != null)
                                             {
                                                 dialog.dismiss();
-                                                getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new HomeFragment()).commit();
+                                                /*getSupportFragmentManager().beginTransaction().add(R.id.frame_layout,new HomeFragment()).commit();*/
+                                                Intent i = new Intent(SignUpActivity.this, MainActivity.class);
+                                                startActivity(i);
+                                                finish();
                                             }
                                         }
                                         else
