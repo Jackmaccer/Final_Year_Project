@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddWellbeingActivity">
-
-
+    tools:context=".EditNoteActivity">
 
     <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="?attr/actionBarSize"
-        android:id="@+id/toolbarCreateNote"
+        android:id="@+id/toolbarEditNote"
         android:background="@color/white">
 
         <EditText
@@ -21,8 +19,7 @@
             android:textSize="20sp"
             android:textStyle="bold"
             android:textColor="@color/black"
-            android:hint="Enter your title here"
-            android:id="@+id/createTitleNote">
+            android:id="@+id/editTitleNote">
 
         </EditText>
 
@@ -35,10 +32,9 @@
         android:background="#faf7f7"
         android:gravity="top|left"
         android:textColor="@color/black"
-        android:hint="How are you today?"
-        android:layout_below="@+id/toolbarCreateNote"
+        android:layout_below="@+id/toolbarEditNote"
         android:padding="15dp"
-        android:id="@+id/createContentNote">
+        android:id="@+id/editContentNote">
 
     </EditText>
 
@@ -50,19 +46,11 @@
         android:layout_marginBottom="30dp"
         android:layout_marginRight="30dp"
         android:layout_gravity = "bottom|end"
-        android:id="@+id/saveNote"
+        android:id="@+id/saveEditNote"
         android:src="@drawable/ic_save"
         app:maxImageSize="35dp">
 
     </com.google.android.material.floatingactionbutton.FloatingActionButton>
 
-    <ProgressBar
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:visibility="invisible"
-        android:id="@+id/progressBarAWAct"
-        android:layout_marginTop="10dp">
 
-    </ProgressBar>
 </RelativeLayout>

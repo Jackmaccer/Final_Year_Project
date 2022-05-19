@@ -14,6 +14,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.ProgressBar;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
@@ -30,10 +31,7 @@ import java.util.ArrayList;
 
 public class WellbeingFragment extends Fragment {
 
-    RecyclerView recyclerView;
-    ArrayList<Note> noteArrayList;
-    WellbeingRecyclerAdapter wbAdapter;
-    FirebaseFirestore db;
+    ProgressBar progressBarWBFrag;
 
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -46,12 +44,16 @@ public class WellbeingFragment extends Fragment {
                              Bundle savedInstanceState)
     {
         View v = inflater.inflate(R.layout.fragment_wellbeing, container, false);
+        progressBarWBFrag = v.findViewById(R.id.progressbarWBFragment);
 
         Button btn1 = (Button) v.findViewById(R.id.addNoteBT);
         btn1.setOnClickListener(new View.OnClickListener(){
 
             @Override
             public void onClick(View v) {
+
+                progressBarWBFrag.setVisibility(View.VISIBLE);
+
                 Intent i = new Intent(getActivity(), WellbeingActivity.class);
                 startActivity(i);
             }

@@ -8,6 +8,7 @@ import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -32,12 +33,14 @@ import java.util.Map;
 
 public class AddWellbeingActivity extends AppCompatActivity {
 
-    private static final String TAG = "AddWellbeingActivity";
+
     EditText createtitleofnote, createcontentofnote;
     FloatingActionButton savenote;
     FirebaseAuth firebaseAuth;
     FirebaseUser firebaseUser;
     FirebaseFirestore firebaseFirestore;
+
+    ProgressBar progressBarAWAcv;
 
 
     @Override
@@ -48,6 +51,8 @@ public class AddWellbeingActivity extends AppCompatActivity {
         savenote = findViewById(R.id.saveNote);
         createcontentofnote = findViewById(R.id.createContentNote);
         createtitleofnote = findViewById(R.id.createTitleNote);
+
+        progressBarAWAcv = findViewById(R.id.progressBarAWAct);
 
         firebaseAuth = FirebaseAuth.getInstance();
         firebaseFirestore = FirebaseFirestore.getInstance();
@@ -67,6 +72,7 @@ public class AddWellbeingActivity extends AppCompatActivity {
                 }
                 else
                 {
+                    progressBarAWAcv.setVisibility(View.VISIBLE);
                     DocumentReference documentReference = firebaseFirestore.collection("notes").document(firebaseUser.getUid()).collection("myNotes").document();
                     Map<String, Object> note = new HashMap<>();
                     note.put("title",title);
@@ -85,6 +91,7 @@ public class AddWellbeingActivity extends AppCompatActivity {
                         public void onFailure(@NonNull Exception e)
                         {
                             Toast.makeText(getApplicationContext(), "Wellbeing entry failed to save", Toast.LENGTH_SHORT).show();
+                            progressBarAWAcv.setVisibility(View.INVISIBLE);
                         }
                     });
 
