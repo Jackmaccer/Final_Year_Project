@@ -15,7 +15,7 @@ public class Note
     public Note(String text, Timestamp created, String userId) {
         this.text = text;
         this.created = created;
-        this.userId = this.userId;
+        this.userId = userId;
     }
 
     public String getText() {

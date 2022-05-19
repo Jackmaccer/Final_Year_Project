@@ -14,6 +14,9 @@
         android:theme="@style/Theme.FinalYearProject"
         tools:targetApi="31">
         <activity
+            android:name=".WellbeingActivity"
+            android:exported="false" />
+        <activity
             android:name=".AddWellbeingActivity"
             android:exported="false" />
         <activity
@@ -43,7 +46,7 @@
             android:exported="false" />
         <activity
             android:name=".MainActivity"
-            android:exported="false"></activity>
+            android:exported="false" />
     </application>
 
 </manifest>
